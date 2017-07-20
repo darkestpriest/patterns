@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-
+    sourceSets.main.resources.srcDirs = ["src/main/resources/"]
 }
 
 jar {
