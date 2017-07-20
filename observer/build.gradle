@@ -17,6 +17,7 @@ jar {
     println('Creating jar file for ' + project.name)
     manifest {
         attributes 'Implementation-Title': name,
-                'Implementation-Version': version
+                'Implementation-Version': version,
+                'Main-Class': 'com.cardinal.observer.gui.ObserverView'
     }
 }
