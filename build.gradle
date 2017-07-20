@@ -1,0 +1,27 @@
+group 'com.cardinal'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+subprojects.each { subProject -> evaluationDependsOn( subProject.path ) }
+jar.dependsOn subprojects.tasks['jar']
+jar {
+    baseName = 'avisports'
+    manifest {
+        attributes 'Implementation-Title': 'avisports',
+                'Implementation-Version': version
+    }
+    subprojects.each { subproject ->
+        from subproject.buildDir.absolutePath + '/classes/java/main'
+    }
+}
