@@ -1,4 +1,5 @@
 rootProject.name = 'patterns'
 include 'observer'
 include 'decorator'
+include 'factory'
 
