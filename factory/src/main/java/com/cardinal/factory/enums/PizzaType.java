@@ -6,6 +6,7 @@ package com.cardinal.factory.enums;
 public enum PizzaType {
     CHEESE("cheese"),
     VEGGIE("veggie"),
+    CLAMS("clams"),
     PEPPERONI("pepperoni")
     ;
 
