@@ -9,6 +9,7 @@ dependencies {
     compile project(':observer')
     compile project(':decorator')
     compile project(':factory')
+    compile project(':singleton')
 }
 
 subprojects.each { subProject -> evaluationDependsOn( subProject.path ) }
