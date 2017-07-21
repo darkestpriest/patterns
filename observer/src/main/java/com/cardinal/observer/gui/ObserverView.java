@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
  * Created by maperez on 20/7/2017.
  */
 public class ObserverView {
-    JFrame jFrame;
+    private JFrame jFrame;
 
     public static void main(String[] args) {
         ObserverView observerView = new ObserverView();

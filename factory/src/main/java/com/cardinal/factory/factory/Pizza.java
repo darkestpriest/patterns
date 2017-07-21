@@ -18,7 +18,7 @@ public abstract class Pizza {
     protected Cheese cheese;
     protected Pepperoni pepperoni;
     protected Clams clams;
-    protected List<String> toppings = new ArrayList<>();;
+    protected List<String> toppings = new ArrayList<>();
 
     public abstract void prepare() ;
 

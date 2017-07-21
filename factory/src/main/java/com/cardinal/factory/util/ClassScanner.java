@@ -34,9 +34,7 @@ public class ClassScanner {
                             .getClassLoader()
                             .loadClass(annotatedClass.getName())
                             .newInstance());
-                } catch (InstantiationException e) {
-                    e.printStackTrace();
-                } catch (IllegalAccessException e) {
+                } catch (InstantiationException | IllegalAccessException e) {
                     e.printStackTrace();
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();

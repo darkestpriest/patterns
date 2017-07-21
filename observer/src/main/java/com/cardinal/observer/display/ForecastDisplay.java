@@ -10,10 +10,9 @@ import com.cardinal.observer.interfaces.Observer;
 public class ForecastDisplay implements Observer, DisplayElement {
     private float currentPressure = 29.92f;
     private float lastPressure;
-    private WeatherData weatherData;
 
     public ForecastDisplay(WeatherData weatherData) {
-        this.weatherData = weatherData;
+        WeatherData weatherData1 = weatherData;
         weatherData.registerObserver(this);
     }
 

@@ -24,6 +24,6 @@ public class PizzaTestDrive {
         System.out.println("First pizza ordered is " + pizza);
 
         System.out.println("Stores available: ");
-        ClassScanner.getAvailableStores().forEach(object -> System.out.println(object));
+        ClassScanner.getAvailableStores().forEach(System.out::println);
     }
 }
