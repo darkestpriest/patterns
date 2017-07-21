@@ -3,4 +3,5 @@ include 'observer'
 include 'decorator'
 include 'factory'
 include 'singleton'
+include 'command'
 
