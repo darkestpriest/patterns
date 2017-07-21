@@ -22,4 +22,8 @@ public class GarageDoorOpenCommand implements Command {
     public void execute() {
         this.garageDoor.up();
     }
+
+    public void undo() {
+        this.garageDoor.down();
+    }
 }

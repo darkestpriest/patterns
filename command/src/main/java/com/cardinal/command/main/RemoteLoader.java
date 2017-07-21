@@ -18,12 +18,15 @@ public class RemoteLoader {
         System.out.println(control);
 
         IntStream.range(0, offCommands.size())
-                .forEach(i ->
-                        control.offButtonWasPushed(i)
-                );
+                .forEach(i -> {
+                    control.offButtonWasPushed(i);
+                    control.undoButtonWasPushed();
+                });
         IntStream.range(0, onCommands.size())
-                .forEach(i ->
-                        control.onButtonWasPushed(i)
-                );
+                .forEach(i -> {
+                    control.onButtonWasPushed(i);
+                    control.undoButtonWasPushed();
+
+                });
     }
 }

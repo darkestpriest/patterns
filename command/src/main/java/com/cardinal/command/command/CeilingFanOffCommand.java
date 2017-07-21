@@ -19,4 +19,8 @@ public class CeilingFanOffCommand implements Command{
     public void execute() {
         ceilingFan.off();
     }
+
+    public void undo() {
+        ceilingFan.medium();
+    }
 }

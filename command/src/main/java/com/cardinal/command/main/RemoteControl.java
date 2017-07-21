@@ -1,5 +1,6 @@
 package com.cardinal.command.main;
 
+import com.cardinal.command.command.NoCommand;
 import com.cardinal.command.enums.CommandType;
 import com.cardinal.command.interfaces.Command;
 
@@ -11,16 +12,25 @@ public class RemoteControl {
     private final List<Command> onCommands;
     private final List<Command> offCommands;
 
+    private Command undoCommand;
+
     public RemoteControl(final Map<CommandType, List<Command>> commandMap) {
         onCommands = commandMap.get(CommandType.ON);
         offCommands = commandMap.get(CommandType.OFF);
+        undoCommand = new NoCommand();
     }
 
     public void onButtonWasPushed(int slot) {
         onCommands.get(slot).execute();
+        this.undoCommand = onCommands.get(slot);
     }
     public void offButtonWasPushed(int slot) {
         offCommands.get(slot).execute();
+        this.undoCommand = offCommands.get(slot);
+    }
+
+    public void undoButtonWasPushed() {
+        this.undoCommand.undo();
     }
 
     public String toString() {
