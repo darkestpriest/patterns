@@ -1,0 +1,18 @@
+group 'com.cardinal'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+dependencies {
+
+}
+
+jar {
+    println('Creating jar file for ' + project.name)
+    manifest {
+        attributes 'Implementation-Title': name,
+                'Implementation-Version': version
+    }
+}

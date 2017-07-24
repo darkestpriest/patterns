@@ -6,4 +6,5 @@ include 'singleton'
 include 'command'
 include 'template'
 include 'state'
+include 'proxy'
 

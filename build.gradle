@@ -13,6 +13,7 @@ dependencies {
     compile project(':command')
     compile project(':template')
     compile project(':state')
+    compile project(':proxy')
 }
 
 subprojects.each { subProject -> evaluationDependsOn( subProject.path ) }
