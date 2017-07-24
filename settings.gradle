@@ -7,4 +7,5 @@ include 'command'
 include 'template'
 include 'state'
 include 'proxy'
+include 'mvc'
 
