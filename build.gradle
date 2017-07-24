@@ -12,6 +12,7 @@ dependencies {
     compile project(':singleton')
     compile project(':command')
     compile project(':template')
+    compile project(':state')
 }
 
 subprojects.each { subProject -> evaluationDependsOn( subProject.path ) }
