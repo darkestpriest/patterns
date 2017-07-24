@@ -4,4 +4,5 @@ include 'decorator'
 include 'factory'
 include 'singleton'
 include 'command'
+include 'template'
 
